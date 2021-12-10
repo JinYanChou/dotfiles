@@ -11,6 +11,7 @@
 #==============
 dotfiles_dir=~/dotfiles
 log_file=~/install_progress_log.txt
+echo "" > $log_file
 
 #==============
 # Delete existing dot files and folders
