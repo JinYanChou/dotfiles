@@ -1,5 +1,6 @@
 log_file=~/install_progress_log.txt
 
+sudo apt-get update
 sudo apt-get -y install curl
 
 # ---
@@ -21,11 +22,17 @@ git clone https://github.com/zsh-users/zsh-completions ${HOME}/.oh-my-zsh/custom
 # Install tmux
 # ---
 sudo apt-get -y install tmux
+sudo apt-get -y install xsel
 if type -p tmux > /dev/null; then
     echo "tmux Installed" >> $log_file
 else
     echo "tmux FAILED TO INSTALL!!!" >> $log_file
 fi
+
+git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
+ln -s -f .tmux/.tmux.conf
+
+git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 
 #==============
 # Give the user a summary of what has been installed
