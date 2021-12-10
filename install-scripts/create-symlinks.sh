@@ -11,7 +11,6 @@
 #==============
 dotfiles_dir=~/dotfiles
 log_file=~/install_progress_log.txt
-echo "" > $log_file
 
 #==============
 # Delete existing dot files and folders
@@ -23,7 +22,7 @@ sudo rm -rf ~/.zshrc > /dev/null 2>&1
 # Allow overriding with files of matching names in the custom-configs dir
 #==============
 ln -sf $dotfiles_dir/zshrc ~/.zshrc
-ln -sf $dotfiles_dir/tmux.conf.local ~/.tmux.conf.local
+ln -sf $dotfiles_dir/tmux.conf.local $HOME/.tmux.conf.local
 
 #==============
 # Set zsh as the default shell
