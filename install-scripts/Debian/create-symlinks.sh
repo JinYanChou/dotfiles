@@ -27,7 +27,7 @@ ln -sf $dotfiles_dir/zshrc ~/.zshrc
 #==============
 # Set zsh as the default shell
 #==============
-sudo chsh -s /bin/zsh
+sudo chsh $(whoami) -s /bin/zsh
 
 #==============
 # Give the user a summary of what has been installed
