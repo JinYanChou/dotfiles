@@ -1,6 +1,6 @@
 log_file=~/install_progress_log.txt
 
-sudo apt-get -y install curl git
+sudo apt-get -y install curl
 
 # ---
 # Install zsh
