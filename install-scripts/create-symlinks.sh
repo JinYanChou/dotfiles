@@ -37,5 +37,3 @@ cat $log_file
 echo
 echo "Enjoy"
 rm $log_file
-
-exit
