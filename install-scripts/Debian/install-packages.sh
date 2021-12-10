@@ -1,30 +1,24 @@
 log_file=~/install_progress_log.txt
+echo "" > $log_file
 
-sudo apt-get -y install zsh
+# ---
+# Install zsh
+# ---
+sudo apt-get -y install zsh autojump
 if type -p zsh > /dev/null; then
     echo "zsh Installed" >> $log_file
 else
     echo "zsh FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo apt-get install -y zsh-syntax-highlighting
-
-sudo apt-get -y install curl
-if type -p curl > /dev/null; then
-    echo "curl Installed" >> $log_file
-else
-    echo "crul FAILED TO INSTALL!!!" >> $log_file
-fi
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 # ---
-# Install git-completion and git-prompt
+# Install tmux
 # ---
-cd ~/
-curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
-mv ~/git-completion.bash ~/.git-completion.bash
-curl https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-echo "git-completion and git-prompt Installed and Configured" >> $log_file
-
 sudo apt-get -y install tmux
 if type -p tmux > /dev/null; then
     echo "tmux Installed" >> $log_file
