@@ -27,8 +27,7 @@ ln -sf $dotfiles_dir/zshrc ~/.zshrc
 #==============
 # Set zsh as the default shell
 #==============
-sudo chsh $(whoami) -s /bin/zsh
-sudo su - $(whoami)
+sudo chsh -s $(which zsh) $(whoami)
 
 #==============
 # Give the user a summary of what has been installed
@@ -38,3 +37,5 @@ cat $log_file
 echo
 echo "Enjoy"
 rm $log_file
+
+exit
