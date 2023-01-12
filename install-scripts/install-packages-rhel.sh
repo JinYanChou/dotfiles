@@ -23,6 +23,8 @@ cd autojump
 ./install.py
 cd ${HOME}
 
+exec $SHELL
+
 # ---
 # Install tmux
 # ---
@@ -43,7 +45,7 @@ git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 # ---
 git clone https://github.com/gmarik/vundle.git ${HOME}/.vim/bundle/vundle
 ln -s -f dotfiles/vimrc ~/.vimrc
-vim +PlugInstall +qall >/dev/null 2>&1
+vim -E +PluginInstall +qall
 
 #==============
 # Give the user a summary of what has been installed
