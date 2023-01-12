@@ -4,7 +4,7 @@ log_file=~/install_progress_log.txt
 # Install zsh
 # ---
 sudo yum install zsh util-linux-user python2 -y
-sudo ln -s /usr/bin/python3 /usr/bin/python
+sudo ln -s /usr/bin/python2 /usr/bin/python
 if type -p zsh > /dev/null; then
     echo "zsh Installed" >> $log_file
 else
