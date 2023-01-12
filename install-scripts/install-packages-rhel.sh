@@ -1,7 +1,5 @@
 log_file=~/install_progress_log.txt
 
-sudo yum update -y
-
 # ---
 # Install zsh
 # ---
