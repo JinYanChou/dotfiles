@@ -21,8 +21,6 @@ cd autojump
 ./install.py
 cd ${HOME}
 
-exec $SHELL
-
 # ---
 # Install tmux
 # ---
