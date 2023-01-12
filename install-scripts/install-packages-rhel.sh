@@ -38,6 +38,13 @@ ln -s -f .tmux/.tmux.conf
 
 git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 
+# ---
+# Install vundle
+# ---
+git clone https://github.com/gmarik/vundle.git ${HOME}/.vim/bundle/vundle
+ln -sf $dotfiles_dir/vimrc ~/.vimrc
+vim +PlugInstall +qall > /dev/null
+
 #==============
 # Give the user a summary of what has been installed
 #==============
