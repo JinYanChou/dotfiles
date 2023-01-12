@@ -16,8 +16,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${HOME}/.oh-m
 git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions ${HOME}/.oh-my-zsh/custom/plugins/zsh-completions
 
-sudo chsh -s $(which zsh) $(whoami)
-
 git clone https://github.com/joelthelion/autojump.git
 cd autojump
 ./install.py
