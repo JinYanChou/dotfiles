@@ -41,7 +41,7 @@ git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 # ---
 git clone https://github.com/gmarik/vundle.git ${HOME}/.vim/bundle/vundle
 ln -s -f dotfiles/vimrc ~/.vimrc
-vim -E +PluginInstall +qall
+vim +BundleInstall +qall 2&> /dev/null
 
 #==============
 # Give the user a summary of what has been installed
