@@ -42,7 +42,7 @@ git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 # Install vundle
 # ---
 git clone https://github.com/gmarik/vundle.git ${HOME}/.vim/bundle/vundle
-ln -sf $dotfiles_dir/vimrc ~/.vimrc
+ln -s -f dotfiles/vimrc ~/.vimrc
 vim +PlugInstall +qall > /dev/null
 
 #==============
